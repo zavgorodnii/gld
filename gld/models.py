@@ -1,25 +1,21 @@
 from zope.interface import implementer
 from sqlalchemy import (
     Column,
-    String,
     Unicode,
     Integer,
-    Boolean,
     ForeignKey,
-    UniqueConstraint,
 )
-from sqlalchemy.orm import relationship, backref
-from sqlalchemy.ext.declarative import declared_attr
-from sqlalchemy.ext.hybrid import hybrid_property
-
 from clld import interfaces
-from clld.db.meta import Base, CustomModelMixin
-#from clld.db.models.common import Language
+from clld.db.meta import CustomModelMixin
+from clld.db.models.common import Unit
 
 
-#-----------------------------------------------------------------------------
-# specialized common mapper classes
-#-----------------------------------------------------------------------------
-#@implementer(interfaces.ILanguage)
-#class gldLanguage(CustomModelMixin, Language):
-#    pk = Column(Integer, ForeignKey('language.pk'), primary_key=True)
+@implementer(interfaces.IUnit)
+class Word(CustomModelMixin, Unit):
+    pk = Column(Integer, ForeignKey('unit.pk'), primary_key=True)
+
+    swadesh_id = Column(Integer)
+    swadesh_word = Column(Integer)
+    form = Column(Unicode)
+    cognation_index = Column(Integer)
+    notes = Column(Unicode)

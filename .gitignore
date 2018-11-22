@@ -1,2 +1,5 @@
 .idea/
 venv/
+gld/scripts/data/
+*__pycache__*
+*egg-info*
