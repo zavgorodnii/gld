@@ -20,7 +20,7 @@ iso8601==0.1.12
 isodate==0.6.0
 jdcal==1.4
 latexcodec==1.0.5
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.1.0
 nameparser==1.0.2
 openpyxl==2.5.11
