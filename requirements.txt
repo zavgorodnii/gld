@@ -2,7 +2,7 @@ alembic==1.0.3
 attrs==18.2.0
 Babel==2.6.0
 BTrees==4.5.1
-certifi==2018.10.15
+certifi==2022.12.7
 chardet==3.0.4
 clld==4.4.2
 clldutils==2.5.2
